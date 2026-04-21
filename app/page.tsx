@@ -1,70 +1,53 @@
-import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
+
+const features = [
+  {
+    title: "Create short links in seconds",
+    description:
+      "Turn long URLs into clean, shareable links your audience can remember.",
+  },
+  {
+    title: "Track link performance",
+    description:
+      "Get clear visibility into clicks so you can understand what is working.",
+  },
+  {
+    title: "Manage everything in one dashboard",
+    description:
+      "Keep all of your links organized and update destinations whenever you need.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-background font-sans">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-background sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-foreground">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-muted-foreground">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <Button variant="link" asChild className="p-0 h-auto text-lg">
-              <a
-                href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              >
-                Templates
-              </a>
-            </Button>{" "}
-            or the{" "}
-            <Button variant="link" asChild className="p-0 h-auto text-lg">
-              <a
-                href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              >
-                Learning
-              </a>
-            </Button>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <Button asChild size="lg" className="h-12 rounded-full px-5 gap-2 md:w-[158px]">
-            <a
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                className="dark:invert"
-                src="/vercel.svg"
-                alt="Vercel logomark"
-                width={16}
-                height={16}
-              />
-              Deploy Now
-            </a>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="h-12 rounded-full px-5 md:w-[158px]">
-            <a
-              href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Documentation
-            </a>
+    <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-6 pb-20 pt-14 sm:px-10">
+      <section className="mx-auto flex w-full max-w-3xl flex-col items-center gap-6 text-center">
+        <p className="text-sm font-medium text-muted-foreground">LinkShortner</p>
+        <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+          Shorten links, share faster, and measure results.
+        </h1>
+        <p className="max-w-2xl text-lg text-muted-foreground">
+          LinkShortner helps you create branded short links and monitor engagement from one simple workspace.
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <Button size="lg" asChild>
+            <Link href="/dashboard">Go to Dashboard</Link>
           </Button>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="mt-16 grid gap-6 md:grid-cols-3">
+        {features.map((feature) => (
+          <article
+            key={feature.title}
+            className="rounded-lg border border-border/70 bg-card/40 p-6"
+          >
+            <h2 className="text-lg font-semibold text-foreground">{feature.title}</h2>
+            <p className="mt-3 text-sm leading-6 text-muted-foreground">{feature.description}</p>
+          </article>
+        ))}
+      </section>
+    </main>
   );
 }
