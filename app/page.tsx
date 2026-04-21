@@ -23,12 +23,12 @@ export default function Home() {
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-6 pb-20 pt-14 sm:px-10">
       <section className="mx-auto flex w-full max-w-3xl flex-col items-center gap-6 text-center">
-        <p className="text-sm font-medium text-muted-foreground">LinkShortner</p>
+        <p className="text-sm font-medium text-muted-foreground">LinkShortener</p>
         <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
           Shorten links, share faster, and measure results.
         </h1>
         <p className="max-w-2xl text-lg text-muted-foreground">
-          LinkShortner helps you create branded short links and monitor engagement from one simple workspace.
+          LinkShortener helps you create branded short links and monitor engagement from one simple workspace.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Button size="lg" asChild>
