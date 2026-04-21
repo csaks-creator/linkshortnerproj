@@ -1,4 +1,11 @@
 ---
 agent: Instructions-Generator
+description: Generate a new project instruction markdown file and wire it into AGENTS.md
 ---
-Take the information below and generate an agent instruction .md file for it  inthe /docs direcltyr. inf a .md filename is provided, use that, otherewise generate and appropriate filename based on the genreated content. Maker sure the instruction are consise and not too long. Make sure to update the AGENTS.mx file to reference this new docs file. If not information is provided below, provmpt the user to gedive the necessary detaisl about the layer of architecture or coding standards to document.
+Take the information below and generate an agent instruction `.md` file in the `/doc` directory.
+
+If a `.md` filename is provided, use it. Otherwise, generate an appropriate filename based on the content.
+
+Keep instructions concise and practical. Update `AGENTS.md` to reference the new `doc/*.md` file.
+
+If no information is provided, prompt the user for the necessary details about the architecture layer or coding standards to document.
