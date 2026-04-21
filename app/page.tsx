@@ -31,7 +31,7 @@ export default function Home() {
           LinkShortener helps you create branded short links and monitor engagement from one simple workspace.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
-          <Button size="lg" asChild>
+          <Button size="lg" className="bg-red-600 text-white hover:bg-red-700" asChild>
             <Link href="/dashboard">Go to Dashboard</Link>
           </Button>
         </div>
