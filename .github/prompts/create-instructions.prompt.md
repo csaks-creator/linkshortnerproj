@@ -2,7 +2,7 @@
 agent: Instructions-Generator
 description: Generate a new project instruction markdown file and wire it into AGENTS.md
 ---
-Take the information below and generate an agent instruction `.md` file in the `/doc` directory.
+Take the information below and generate an agent instruction `.md` file in the `/doc` directory. if a .md filename is provided, 
 
 If a `.md` filename is provided, use it. Otherwise, generate an appropriate filename based on the content.
 

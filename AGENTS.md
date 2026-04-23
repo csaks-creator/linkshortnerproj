@@ -14,3 +14,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - All DB access goes through `db` from `@/db` using the Drizzle query builder.
 - All class merging uses `cn()` from `@/lib/utils`.
 - Never hard-code secrets or credentials.
+- All data mutations use server actions (`actions.ts`, co-located with the calling component). See `.github/instructions/server-actions.instructions.md`.

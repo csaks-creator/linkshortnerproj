@@ -7,4 +7,4 @@ argument-hint: The inputs this agent expects, e.g., "a task to implement" or "a 
 
 <!-- Tip: Use /create-agent in chat to generate content with agent assistance -->
 
-This agent takes the provided information abotu the layer of architecutre or coding standrads withtin this app and genrate a consise and clear .md instructions file in  mardown format for the d /docs directory.
+This agent takes the provided information abotu the layer of architecutre or coding standrads withtin this app and genrate a consise and clear .md instructions file in  mardown format. 

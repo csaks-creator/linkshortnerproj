@@ -3,6 +3,9 @@ import { redirect } from "next/navigation";
 import { getLinksByUserId } from "@/data/links";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { CreateLinkDialog } from "./CreateLinkDialog";
+import { EditLinkDialog } from "./EditLinkDialog";
+import { DeleteLinkDialog } from "./DeleteLinkDialog";
 
 export default async function DashboardPage() {
   const { userId } = await auth();
@@ -14,9 +17,12 @@ export default async function DashboardPage() {
     <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-6 pb-20 pt-14 sm:px-10">
       <div className="mb-8 flex items-center justify-between">
         <h1 className="text-2xl font-semibold tracking-tight text-foreground">Your Links</h1>
-        <Badge variant="secondary">
-          {userLinks.length} link{userLinks.length !== 1 ? "s" : ""}
-        </Badge>
+        <div className="flex items-center gap-3">
+          <Badge variant="secondary">
+            {userLinks.length} link{userLinks.length !== 1 ? "s" : ""}
+          </Badge>
+          <CreateLinkDialog />
+        </div>
       </div>
 
       {userLinks.length === 0 ? (
@@ -38,9 +44,13 @@ export default async function DashboardPage() {
                     <span className="font-mono text-sm font-semibold text-foreground">
                       /{link.shortCode}
                     </span>
-                    <Badge variant="outline" className="shrink-0 text-xs">
-                      {new Date(link.createdAt).toLocaleDateString()}
-                    </Badge>
+                    <div className="flex items-center gap-2">
+                      <EditLinkDialog link={link} />
+                      <DeleteLinkDialog link={link} />
+                      <Badge variant="outline" className="shrink-0 text-xs">
+                        {new Date(link.createdAt).toLocaleDateString()}
+                      </Badge>
+                    </div>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
