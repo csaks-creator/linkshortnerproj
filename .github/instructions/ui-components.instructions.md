@@ -1,3 +1,7 @@
+---
+description: This file describes the rules for using UI components in the project.
+---
+
 # UI Components — shadcn/ui
 
 **All UI elements in this app use shadcn/ui exclusively. Never create custom UI components from scratch.**

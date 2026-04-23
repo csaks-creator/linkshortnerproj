@@ -1,3 +1,7 @@
+---
+description: read this before implementing or modifying any authentication-related code in the project.
+---
+
 # Authentication — Clerk
 
 **All authentication in this app is handled exclusively by Clerk (`@clerk/nextjs`). No other auth libraries, custom sessions, JWTs, or manual credential checks are permitted.**
